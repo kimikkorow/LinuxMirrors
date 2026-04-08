@@ -1,6 +1,6 @@
 #!/bin/bash
 ## Author: SuperManito
-## Modified: 2026-03-04
+## Modified: 2026-04-08
 ## License: MIT
 ## GitHub: https://github.com/SuperManito/LinuxMirrors
 ## Website: https://linuxmirrors.cn
@@ -2678,7 +2678,19 @@ function change_mirrors_or_install_EPEL() {
         local package_path="epel/epel-release-latest-${epel_version}"
         case "${epel_version}" in
         7)
-            package_path="epel-archive/7/${DEVICE_ARCH_RAW}/Packages/e/epel-release-7-14"
+            local epel_package_sub_version
+            case "${DEVICE_ARCH_RAW}" in
+            aarch64)
+                epel_package_sub_version="12"
+                ;;
+            ppc64)
+                epel_package_sub_version="11"
+                ;;
+            *)
+                epel_package_sub_version="14"
+                ;;
+            esac
+            package_path="epel-archive/7/${DEVICE_ARCH_RAW}/Packages/e/epel-release-7-${epel_package_sub_version}"
             ;;
         9)
             ## CentOS Stream 9 特殊，有两个不同的发行包 epel-release epel-next-release
