@@ -5,7 +5,7 @@
 </picture>
 <h1>LinuxMirrors</h1>
 <p>GNU/Linux 更換系統軟體源腳本及 Docker 安裝與換源腳本</p>
-<p><a href="README.md">简体中文</a> | 繁體中文 | <a href="README.en-US.md">English</a></p>
+<p><a href="README.md">简体中文</a> | <a href="README.en-US.md">English</a></p>
 <p>
   <a href="https://github.com/SuperManito/LinuxMirrors/blob/main/LICENSE"><img src="https://shields.io/github/license/SuperManito/LinuxMirrors?color=%23007bff" alt="License: MIT"></a>
   <a href="https://github.com/SuperManito/LinuxMirrors"><img src="https://img.shields.io/github/stars/SuperManito/LinuxMirrors?color=%23007bff&style=flat-square" alt="Stars"></a>
