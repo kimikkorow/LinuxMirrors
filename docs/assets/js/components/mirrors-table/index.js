@@ -155,7 +155,7 @@ ComponentSystem.register('mirrors-table', {
     },
     created() {
         const allKeys = this._flattenFilterKeys(this.filterOptions)
-        const defaultHidden = new Set(['debian', 'ubuntu', 'centos', 'openeuler'])
+        const defaultHidden = new Set(['debian', 'ubuntu', 'centos_vault', 'openeuler'])
         this.selectedColumnFilters = allKeys.filter((k) => !defaultHidden.has(k))
         this.selectedRowFilters = Array.isArray(this.originalData) ? this.originalData.map((r) => r.name) : []
         this._debouncedUpdateColumns = debounce(this._updateColumns.bind(this), 120)

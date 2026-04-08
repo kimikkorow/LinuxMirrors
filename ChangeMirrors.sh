@@ -30,6 +30,7 @@ mirror_list_default=(
     "mirrors.cqupt.edu.cn"
     "mirrors.ustc.edu.cn"
     "mirror.iscas.ac.cn"
+    "mirrors.cstcloud.cn"
     "__OFFICIAL_SOURCE_TAG__"
 )
 # 中国大陆教育网
@@ -8181,7 +8182,8 @@ function msg_pack_zh_hans() {
         ['mirrors.default.13']='重庆邮电大学'
         ['mirrors.default.14']='中国科学技术大学'
         ['mirrors.default.15']='中国科学院软件研究所'
-        ['mirrors.default.16']='官方源'
+        ['mirrors.default.16']='中国科技云'
+        ['mirrors.default.17']='官方源'
         ['mirrors.edu.0']='北京大学'
         ['mirrors.edu.1']='北京交通大学'
         ['mirrors.edu.2']='北京外国语大学'
@@ -8413,7 +8415,8 @@ function msg_pack_zh_hant() {
         ['mirrors.default.13']='重慶郵電大學'
         ['mirrors.default.14']='中國科學技術大學'
         ['mirrors.default.15']='中國科學院軟件研究所'
-        ['mirrors.default.16']='官方源'
+        ['mirrors.default.16']='中國科技雲'
+        ['mirrors.default.17']='官方源'
         ['mirrors.edu.0']='北京大學'
         ['mirrors.edu.1']='北京交通大學'
         ['mirrors.edu.2']='北京外國語大學'
@@ -8645,7 +8648,8 @@ Issue Report {}'
         ['mirrors.default.13']='Chongqing University of Posts and Telecommunications'
         ['mirrors.default.14']='University of Science and Technology of China'
         ['mirrors.default.15']='Institute of Software, Chinese Academy of Sciences'
-        ['mirrors.default.16']='Official Source'
+        ['mirrors.default.16']='China Science & Technology Cloud'
+        ['mirrors.default.17']='Official Source'
         ['mirrors.edu.0']='Peking University'
         ['mirrors.edu.1']='Beijing Jiaotong University'
         ['mirrors.edu.2']='Beijing Foreign Studies University'
