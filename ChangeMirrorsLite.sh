@@ -550,8 +550,8 @@ function collect_system_info() {
         ## 针对特定系统的判定
         if [[ "${SYSTEM_JUDGMENT}" == "${SYSTEM_DEBIAN}" ]]; then
             ## 尚未正式发布的版本
-            if [[ -z "${SYSTEM_VERSION_ID}" && "${SYSTEM_VERSION_CODENAME}" == "trixie" ]]; then
-                SYSTEM_VERSION_ID="13"
+            if [[ -z "${SYSTEM_VERSION_ID}" && "${SYSTEM_VERSION_CODENAME}" == "forky" ]]; then
+                SYSTEM_VERSION_ID="14"
                 SYSTEM_VERSION_ID_MAJOR="${SYSTEM_VERSION_ID%%.*}"
                 SYSTEM_VERSION_ID_MINOR="${SYSTEM_VERSION_ID#*.}"
             fi
