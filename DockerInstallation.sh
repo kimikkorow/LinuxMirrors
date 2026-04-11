@@ -156,6 +156,8 @@ File_ProxmoxVersion=/etc/pve/.version
 File_AptSourceList=/etc/apt/sources.list
 Dir_AptAdditionalSources=/etc/apt/sources.list.d
 Dir_YumRepos=/etc/yum.repos.d
+File_DebianSources=$Dir_AptAdditionalSources/debian.sources
+File_UbuntuSources=$Dir_AptAdditionalSources/ubuntu.sources
 
 ## 定义 Docker 相关变量
 Dir_Docker=/etc/docker
@@ -165,6 +167,7 @@ File_DockerVersionTmp=docker-version.txt
 File_DockerCEVersionTmp=docker-ce-version.txt
 File_DockerCECliVersionTmp=docker-ce-cli-version.txt
 File_DockerSourceList=$Dir_AptAdditionalSources/docker.list
+File_DockerSources=$Dir_AptAdditionalSources/docker.sources
 File_DockerRepo=$Dir_YumRepos/docker-ce.repo
 
 ## 定义颜色和样式变量
@@ -627,7 +630,6 @@ function collect_system_info() {
             SYSTEM_JUDGMENT="${SYSTEM_RASPBERRY_PI_OS}"
             SYSTEM_PRETTY_NAME="${SYSTEM_RASPBERRY_PI_OS}"
         fi
-		
         ## 针对特定系统的判定
         if [[ "${SYSTEM_JUDGMENT}" == "${SYSTEM_DEBIAN}" ]]; then
             ## 尚未正式发布的版本
@@ -646,6 +648,14 @@ function collect_system_info() {
             if [[ "${SYSTEM_VERSION_ID_MAJOR}" && "${SYSTEM_VERSION_ID_MAJOR}" -ge 24 ]]; then
                 USE_DEB822_FORMAT="true"
             fi
+        fi
+        # Debian DEB822 格式源文件
+        if [[ "${SYSTEM_JUDGMENT}" == "${SYSTEM_DEBIAN}" ]] && [ -f "${File_DebianSources}" ]; then
+            USE_DEB822_FORMAT="true"
+        fi
+        # Ubuntu DEB822 格式源文件
+        if [[ "${SYSTEM_JUDGMENT}" == "${SYSTEM_UBUNTU}" ]] && [ -f "${File_UbuntuSources}" ]; then
+            USE_DEB822_FORMAT="true"
         fi
         ;;
     "${SYSTEM_REDHAT}")
@@ -711,6 +721,7 @@ function collect_system_info() {
             "${SYSTEM_KALI}")
                 SOURCE_BRANCH="debian"
                 SOURCE_BRANCH_CODENAME="${debian_codename_latest}"
+                USE_DEB822_FORMAT="true"
                 ;;
             "${SYSTEM_LINUX_MINT}")
                 if [[ "${SYSTEM_NAME}" == *"LMDE"* ]]; then
@@ -1205,8 +1216,17 @@ function configure_docker_ce_mirror() {
         chmod a+r $file_keyring
         ## 添加源
         [ -d "${Dir_AptAdditionalSources}" ] || mkdir -p $Dir_AptAdditionalSources
-        local apt_source_content="deb [arch=$(dpkg --print-architecture) signed-by=${file_keyring}] ${WEB_PROTOCOL}://${SOURCE}/linux/${SOURCE_BRANCH} ${DEBIAN_CODENAME:-${SOURCE_BRANCH_CODENAME:-${SYSTEM_VERSION_CODENAME}}} stable"
-        echo "${apt_source_content}" | tee $File_DockerSourceList >/dev/null 2>&1
+        if [[ "${USE_DEB822_FORMAT}" == "true" ]]; then
+            echo "Types: deb
+URIs: ${WEB_PROTOCOL}://${SOURCE}/linux/${SOURCE_BRANCH}
+Suites: ${DEBIAN_CODENAME:-${SOURCE_BRANCH_CODENAME:-${SYSTEM_VERSION_CODENAME}}}
+Components: stable
+Architectures: $(dpkg --print-architecture)
+Signed-By: ${file_keyring}" >$File_DockerSources
+        else
+            local apt_source_content="deb [arch=$(dpkg --print-architecture) signed-by=${file_keyring}] ${WEB_PROTOCOL}://${SOURCE}/linux/${SOURCE_BRANCH} ${DEBIAN_CODENAME:-${SOURCE_BRANCH_CODENAME:-${SYSTEM_VERSION_CODENAME}}} stable"
+            echo "${apt_source_content}" | tee $File_DockerSourceList >/dev/null 2>&1
+        fi
         commands+=("apt-get update")
         ;;
     "${SYSTEM_REDHAT}" | "${SYSTEM_OPENEULER}" | "${SYSTEM_OPENCLOUDOS}" | "${SYSTEM_ANOLISOS}" | "${SYSTEM_TENCENTOS}" | "${SYSTEM_KYLIN_SERVER}")
