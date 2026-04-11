@@ -1,6 +1,6 @@
 #!/bin/bash
 ## Author: SuperManito
-## Modified: 2026-01-19
+## Modified: 2026-04-11
 ## License: MIT
 ## GitHub: https://github.com/SuperManito/LinuxMirrors
 ## Website: https://linuxmirrors.cn
@@ -19,7 +19,6 @@ mirror_list_docker_ce=(
     "mirrors.zju.edu.cn/docker-ce"
     "mirrors.nju.edu.cn/docker-ce"
     "mirror.sjtu.edu.cn/docker-ce"
-    "mirrors.cqupt.edu.cn/docker-ce"
     "mirrors.ustc.edu.cn/docker-ce"
     "mirror.iscas.ac.cn/docker-ce"
     "download.docker.com"
@@ -2286,10 +2285,9 @@ function msg_pack_zh_hans() {
         ['mirrors.dockerCE.9']='浙江大学'
         ['mirrors.dockerCE.10']='南京大学'
         ['mirrors.dockerCE.11']='上海交通大学'
-        ['mirrors.dockerCE.12']='重庆邮电大学'
-        ['mirrors.dockerCE.13']='中国科学技术大学'
-        ['mirrors.dockerCE.14']='中国科学院软件研究所'
-        ['mirrors.dockerCE.15']='官方源'
+        ['mirrors.dockerCE.12']='中国科学技术大学'
+        ['mirrors.dockerCE.13']='中国科学院软件研究所'
+        ['mirrors.dockerCE.14']='官方源'
         ['mirrors.registry.0']='毫秒镜像（推荐）'
         ['mirrors.registry.1']='Docker Proxy'
         ['mirrors.registry.2']='DaoCloud 道客'
@@ -2437,10 +2435,9 @@ function msg_pack_zh_hant() {
         ['mirrors.dockerCE.9']='浙江大學'
         ['mirrors.dockerCE.10']='南京大學'
         ['mirrors.dockerCE.11']='上海交通大學'
-        ['mirrors.dockerCE.12']='重慶郵電大學'
-        ['mirrors.dockerCE.13']='中國科學技術大學'
-        ['mirrors.dockerCE.14']='中國科學院軟體研究所'
-        ['mirrors.dockerCE.15']='官方源'
+        ['mirrors.dockerCE.12']='中國科學技術大學'
+        ['mirrors.dockerCE.13']='中國科學院軟體研究所'
+        ['mirrors.dockerCE.14']='官方源'
         ['mirrors.registry.0']='毫秒鏡像（推薦）'
         ['mirrors.registry.1']='Docker Proxy'
         ['mirrors.registry.2']='DaoCloud 道客'
@@ -2589,10 +2586,9 @@ Issue Report {}'
         ['mirrors.dockerCE.9']='Zhejiang University'
         ['mirrors.dockerCE.10']='Nanjing University'
         ['mirrors.dockerCE.11']='Shanghai Jiao Tong University'
-        ['mirrors.dockerCE.12']='Chongqing University of Posts and Telecommunications'
-        ['mirrors.dockerCE.13']='University of Science and Technology of China'
-        ['mirrors.dockerCE.14']='Institute of Software, Chinese Academy of Sciences'
-        ['mirrors.dockerCE.15']='Official Source'
+        ['mirrors.dockerCE.12']='University of Science and Technology of China'
+        ['mirrors.dockerCE.13']='Institute of Software, Chinese Academy of Sciences'
+        ['mirrors.dockerCE.14']='Official Source'
         ['mirrors.registry.0']='Millisecond Mirror (recommended)'
         ['mirrors.registry.1']='Docker Proxy'
         ['mirrors.registry.2']='DaoCloud'
