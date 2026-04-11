@@ -627,6 +627,26 @@ function collect_system_info() {
             SYSTEM_JUDGMENT="${SYSTEM_RASPBERRY_PI_OS}"
             SYSTEM_PRETTY_NAME="${SYSTEM_RASPBERRY_PI_OS}"
         fi
+		
+        ## 针对特定系统的判定
+        if [[ "${SYSTEM_JUDGMENT}" == "${SYSTEM_DEBIAN}" ]]; then
+            ## 尚未正式发布的版本
+            if [[ -z "${SYSTEM_VERSION_ID}" && "${SYSTEM_VERSION_CODENAME}" == "forky" ]]; then
+                SYSTEM_VERSION_ID="14"
+                SYSTEM_VERSION_ID_MAJOR="${SYSTEM_VERSION_ID%%.*}"
+                SYSTEM_VERSION_ID_MINOR="${SYSTEM_VERSION_ID#*.}"
+            fi
+            ## 是否使用 DEB822 格式
+            if [[ "${SYSTEM_VERSION_ID_MAJOR}" && "${SYSTEM_VERSION_ID_MAJOR}" -ge 13 ]]; then
+                USE_DEB822_FORMAT="true"
+            fi
+        fi
+        if [[ "${SYSTEM_JUDGMENT}" == "${SYSTEM_UBUNTU}" ]]; then
+            ## 是否使用 DEB822 格式
+            if [[ "${SYSTEM_VERSION_ID_MAJOR}" && "${SYSTEM_VERSION_ID_MAJOR}" -ge 24 ]]; then
+                USE_DEB822_FORMAT="true"
+            fi
+        fi
         ;;
     "${SYSTEM_REDHAT}")
         SYSTEM_JUDGMENT="$(awk '{printf $1}' $File_RedHatRelease)"
