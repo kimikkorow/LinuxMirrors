@@ -1,6 +1,6 @@
 #!/bin/bash
 ## Author: SuperManito
-## Modified: 2026-04-11
+## Modified: 2026-04-15
 ## License: MIT
 ## GitHub: https://github.com/SuperManito/LinuxMirrors
 ## Website: https://linuxmirrors.cn
@@ -912,7 +912,7 @@ function collect_system_info() {
         fi
         ;;
     "${SYSTEM_UBUNTU}")
-        if [[ ! "${SYSTEM_VERSION_ID_MAJOR}" =~ ^(1[4-9]|2[0-5])$ ]]; then
+        if [[ ! "${SYSTEM_VERSION_ID_MAJOR}" =~ ^(1[4-9]|2[0-6])$ ]]; then
             is_supported="false"
         fi
         ;;

@@ -106,7 +106,7 @@ hide:
 | 作業系統 | 適配版本 |
 | --- | :---: |
 | <a href="https://www.debian.org" title="https://www.debian.org" target="_blank" rel="noopener noreferrer"><img src="/assets/images/icon/debian.svg" alt="Debian" width="16" height="16" style="vertical-align: -0.35em"></a> **Debian** | _8～13_ |
-| <a href="https://ubuntu.com" title="https://ubuntu.com" target="_blank" rel="noopener noreferrer"><img src="/assets/images/icon/ubuntu.svg" alt="Ubuntu" width="16" height="16" style="vertical-align: -0.15em"></a> **Ubuntu** :material-information-outline:{ title="支援烏班圖家族衍生作業系統，例如 <code>優麒麟</code> <code>Kubuntu</code> 等<br/>由於迭代速度較快並不直接支援所有非 LTS 的版本，因此具體詳見文件" } | _14～25_ |
+| <a href="https://ubuntu.com" title="https://ubuntu.com" target="_blank" rel="noopener noreferrer"><img src="/assets/images/icon/ubuntu.svg" alt="Ubuntu" width="16" height="16" style="vertical-align: -0.15em"></a> **Ubuntu** :material-information-outline:{ title="支援烏班圖家族衍生作業系統，例如 <code>優麒麟</code> <code>Kubuntu</code> 等<br/>由於迭代速度較快並不直接支援所有非 LTS 的版本，因此具體詳見文件" } | _14～26_ |
 | <a href="https://www.kali.org" title="https://www.kali.org" target="_blank" rel="noopener noreferrer"><img src="/assets/images/icon/kali-linux.png" alt="Kali Linux" width="16" height="16"></a> **Kali Linux** | _all_ |
 | <a href="https://linuxmint.com" title="https://linuxmint.com" target="_blank" rel="noopener noreferrer"><img src="/assets/images/icon/linux-mint.svg" alt="Linux Mint" width="16" height="16" style="vertical-align: -0.2em"></a> **Linux Mint** | _17～22 / LMDE 2～7_ |
 | <a href="https://www.deepin.org" title="https://www.deepin.org" target="_blank" rel="noopener noreferrer"><img src="/assets/images/icon/deepin.png" alt="Deepin" width="16" height="16" style="vertical-align: -0.2em"></a> **Deepin** | _all_ |
