@@ -127,7 +127,7 @@ hide:
 </div>
 
 <div style="display: flex; align-items: center; gap: 8px;">
-    <p>✨ 经过了数年的技术沉淀与生产环境检验，广受社区好评，深得开发者喜爱，大厂都在使用</p>
+    <p>✨ 经过多年的技术积累和生产环境验证，获得社区广泛认可，深受开发者喜爱，大厂都在使用</p>
     <div class="icon-brand-section">
       <div class="icon-brand-container no-select">
         <a class="icon-brand-button" target="_blank" rel="noopener noreferrer" href="https://1panel.cn" title="1Panel">

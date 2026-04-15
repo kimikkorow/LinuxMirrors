@@ -185,7 +185,7 @@
 
 Copyright © 2026, [SuperManito](https://github.com/SuperManito). Released under the [MIT](https://github.com/SuperManito/LinuxMirrors/blob/main/LICENSE).
 
-这是一个完全开源的项目，旨在为从事计算机相关行业的朋友们提供便利，使换源更简单
+这是一个完全开源的项目，致力于为计算机从业者提供便利，使换源更简单
 
 <a href="https://star-history.com/#SuperManito/LinuxMirrors&Date">
  <picture>

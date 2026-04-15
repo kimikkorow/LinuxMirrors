@@ -139,7 +139,7 @@ hide:
 
 !!! tip "Usage Help"
 
-    The tabs represent the built-in mirror site types and script sources. Please check whether your target mirror site supports your operating system before use. You can check in the [Mirror List](../mirrors/index.md).  
+    The tabs respectively represent the types of software sources (mirror sites) built into the script, and the different methods for obtaining the script. Please check whether your target mirror site supports your operating system before use. You can check in the [Mirror List](../mirrors/index.md).  
     By default, the original mirror configuration will be automatically backed up. For more details, see the documentation below. If you are confused by some options during use, just press Enter all the way after selecting the mirror, which is the best practice.
 
     _It supports use in abnormal environments such as when the original system software source is damaged, missing, or invalid. There is no need to install any additional dependencies._

@@ -185,7 +185,7 @@ This project has joined the JetBrains & Netlify Open Source Program.
 
 Copyright © 2026, [SuperManito](https://github.com/SuperManito). Released under the [MIT](https://github.com/SuperManito/LinuxMirrors/blob/main/LICENSE).
 
-This is a fully open source project, aiming to provide convenience for friends in the computer-related industry and make mirror switching easier.
+This is a fully open-source project dedicated to providing convenience for computer professionals, making the process of switching software sources simpler.
 
 <a href="https://star-history.com/#SuperManito/LinuxMirrors&Date">
  <picture>

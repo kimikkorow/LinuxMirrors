@@ -127,7 +127,7 @@ hide:
 </div>
 
 <div style="display: flex; align-items: center; gap: 8px;">
-    <p>✨ After years of technical accumulation and production environment testing, it has been widely praised by the community and deeply loved by developers. It is used by major companies.</p>
+    <p>✨ Backed by years of accumulated technical expertise and validation in production environments, it has garnered widespread recognition within the community, is highly favored by developers, and is currently being utilized by major industry players.</p>
     <div class="icon-brand-section">
       <div class="icon-brand-container no-select">
         <a class="icon-brand-button" target="_blank" rel="noopener noreferrer" href="https://1panel.pro" title="1Panel">
