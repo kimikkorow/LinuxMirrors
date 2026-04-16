@@ -2,9 +2,9 @@ ComponentSystem.register('mirrors-table', {
     template: `
 <div>
     <t-config-provider :global-config="globalConfig">
-        <t-space v-if="!isMobile" align="center" style="margin-bottom: 8px; gap: 20px">
+        <t-space v-if="!isMobile" align="center" style="display: flex; flex-flow: wrap; justify-content: space-between; margin-bottom: 8px; gap: 20px">
             <blockquote>
-                <p>{{ startTitle[0] }} <code>Debian</code>、<code>Ubuntu</code>、<code>CentOS</code>、<code>openEuler</code> {{ startTitle[1] }}</p>
+                <p>{{ startTitle }}</p>
             </blockquote>
             <t-space style="width: 100%">
                 <t-popup placement="bottom" :show-arrow="false">
@@ -71,7 +71,7 @@ ComponentSystem.register('mirrors-table', {
             </t-space>
         </t-space>
         <blockquote v-if="isMobile">
-            <p>{{ startTitle[0] }} <code>Debian</code>、<code>Ubuntu</code>、<code>CentOS</code>、<code>openEuler</code> {{ startTitle[1] }}</p>
+            <p>{{ startTitle }}</p>
         </blockquote>
         <t-table
             :columns="columns"
@@ -155,7 +155,7 @@ ComponentSystem.register('mirrors-table', {
     },
     created() {
         const allKeys = this._flattenFilterKeys(this.filterOptions)
-        const defaultHidden = new Set(['debian', 'ubuntu', 'centos_vault', 'openeuler'])
+        const defaultHidden = new Set([])
         this.selectedColumnFilters = allKeys.filter((k) => !defaultHidden.has(k))
         this.selectedRowFilters = Array.isArray(this.originalData) ? this.originalData.map((r) => r.name) : []
         this._debouncedUpdateColumns = debounce(this._updateColumns.bind(this), 120)
@@ -176,7 +176,7 @@ ComponentSystem.register('mirrors-table', {
         },
         startTitle() {
             const f = this.localeFlags
-            return f.isZhHant ? ['下方列表中的鏡像站均同步了', '軟體倉庫，列表根據單位性質、地理位置、名稱長度排序，與實際下載速度無關。'] : f.isEn ? ['All mirror sites in the list below synchronize the', 'software repositories. The list is sorted by institution type, geographic location, and name length, and is not related to actual download speed.'] : ['下方列表中的镜像站均同步了', '软件仓库，列表根据单位性质、地理位置、名称长度进行排序，与实际速度无关。']
+            return f.isZhHant ? '列表根據單位性質、地理位置、名稱長度排序，與實際下載速度無關。' : f.isEn ? 'The list is sorted by institution type, geographic location, and name length, and is not related to actual download speed.' : '列表根据单位性质、地理位置、名称长度进行排序，与实际速度无关。'
         },
         globalConfig() {
             const f = this.localeFlags

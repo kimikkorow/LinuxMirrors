@@ -1,6 +1,7 @@
 const __p = typeof window !== 'undefined' && window.location && window.location.pathname ? window.location.pathname : ''
 const __isZhHant = __p.includes('/zh-Hant')
 const __isEn = __p.includes('/en')
+const __isMobile = typeof window !== 'undefined' && typeof window.matchMedia === 'function' ? window.matchMedia('(max-width: 768px)').matches : false
 
 // 防抖
 function debounce(func, wait) {
