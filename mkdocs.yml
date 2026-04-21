@@ -17,8 +17,6 @@ extra_javascript:
   - https://unpkg.com/vue/dist/vue.global.prod.js
   - https://unpkg.com/tdesign-vue-next/dist/tdesign.min.js
   - assets/js/modules/tdesign-theme.js
-  - assets/js/components/orama-ui/config.js
-  - assets/js/components/orama-ui/index.js
   - assets/js/useThemeTransition.js
   - assets/js/common.js
   - assets/js/component.js
@@ -26,7 +24,6 @@ extra_javascript:
   - assets/js/components/mirrors-table/index.js
 extra_css:
   - https://unpkg.com/tdesign-vue-next/dist/tdesign.min.css
-  - assets/css/orama-ui.css
   - stylesheets/extra.css
 
 theme:

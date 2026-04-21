@@ -155,7 +155,7 @@
 
 ## Quick Start
 
-> The official project website integrates AI chat and search. For more usage, see [**linuxmirrors.cn**](https://linuxmirrors.cn/en/use/)
+> For more usage, see official project website [**linuxmirrors.cn**](https://linuxmirrors.cn/en/use/)
 
 - ### GNU/Linux System Software Mirror Switching
 

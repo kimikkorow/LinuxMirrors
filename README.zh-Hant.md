@@ -155,7 +155,7 @@
 
 ## 快速開始
 
-> 專案官方網站整合了 AI 聊天與搜索，更多使用方法詳見 [**linuxmirrors.cn**](https://linuxmirrors.cn/zh-Hant/use/)
+> 更多使用方法詳見專案官方網站 [**linuxmirrors.cn**](https://linuxmirrors.cn/zh-Hant/use/)
 
 - ### GNU/Linux 更換系統軟體源
 

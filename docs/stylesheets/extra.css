@@ -287,6 +287,10 @@
     width: 24px !important;
 }
 
+.md-header__source {
+    margin-left: 0 !important;
+}
+
 @media screen and (min-width: 768px) {
     .md-header__button {
         border-radius: 6px;

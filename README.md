@@ -155,7 +155,7 @@
 
 ## 快速开始
 
-> 项目官方网站集成了 AI 聊天与搜索，更多使用方法详见 [**linuxmirrors.cn**](https://linuxmirrors.cn/use/)
+> 更多使用方法详见项目官方网站 [**linuxmirrors.cn**](https://linuxmirrors.cn/use/)
 
 - ### GNU/Linux 更换系统软件源
 
