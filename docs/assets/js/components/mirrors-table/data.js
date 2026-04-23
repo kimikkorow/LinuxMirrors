@@ -41,7 +41,7 @@ const mirrorsTableData = [
         iconStyle: { verticalAlign: '-0.25em' },
         url: 'https://mirrors.tencent.com',
         domain: 'mirrors.tencent.com',
-        ipv6: false,
+        ipv6: true,
         debian: true,
         ubuntu: true,
         centos_vault: true,
