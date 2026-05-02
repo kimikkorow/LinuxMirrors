@@ -16,14 +16,18 @@ nav:
 extra_javascript:
   - https://unpkg.com/vue/dist/vue.global.prod.js
   - https://unpkg.com/tdesign-vue-next/dist/tdesign.min.js
+  - https://unpkg.com/@algolia/sitesearch@latest/dist/search-askai.min.js
   - assets/js/modules/tdesign-theme.js
   - assets/js/useThemeTransition.js
   - assets/js/common.js
+  - assets/js/algolia-search/config.js
+  - assets/js/algolia-search/index.js
   - assets/js/component.js
   - assets/js/components/mirrors-table/data.js
   - assets/js/components/mirrors-table/index.js
 extra_css:
   - https://unpkg.com/tdesign-vue-next/dist/tdesign.min.css
+  - https://unpkg.com/@algolia/sitesearch@latest/dist/search-askai.min.css
   - stylesheets/extra.css
 
 theme:

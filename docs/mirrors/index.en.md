@@ -251,7 +251,7 @@ search:
 <button class="md-button" title="https://tool.chinaz.com" onclick="window.open('https://tool.chinaz.com')">Domain Lookup</button>
 <button class="md-button" title="https://tools.ipip.net/newping.php" onclick="window.open('https://tools.ipip.net/newping.php')">Ping Latency Test</button>
 <button class="md-button" title="https://tools.ipip.net/traceroute.php" onclick="window.open('https://tools.ipip.net/traceroute.php')">Tracert Route Trace Test</button>
-<button class="md-button" title="https://ipw.cn/ipv6webcheck" onclick="window.open('https://ipw.cn/ipv6webcheck')">IPv6 Access Test</button>
+<button class="md-button" title="https://www.guokeyun.com/ipv6Monitor.html" onclick="window.open('https://www.guokeyun.com/ipv6Monitor.html')">IPv6 Access Test</button>
 
 !!! tip "This page displays only the default repository addresses provided by the script. If you can't find the one you want, don't worry—the script supports custom addresses via command options. See [Advanced Usage](../use/index.md#command-options-advanced-usage) for details."
 

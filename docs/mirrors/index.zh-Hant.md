@@ -253,7 +253,7 @@ search:
 <button class="md-button" title="https://tool.chinaz.com" onclick="window.open('https://tool.chinaz.com')">域名查詢</button>
 <button class="md-button" title="https://tools.ipip.net/newping.php" onclick="window.open('https://tools.ipip.net/newping.php')">Ping 延遲測試</button>
 <button class="md-button" title="https://tools.ipip.net/traceroute.php" onclick="window.open('https://tools.ipip.net/traceroute.php')">Tracert 路由追蹤測試</button>
-<button class="md-button" title="https://ipw.cn/ipv6webcheck" onclick="window.open('https://ipw.cn/ipv6webcheck')">IPv6 接取測試</button>
+<button class="md-button" title="https://www.guokeyun.com/ipv6Monitor.html" onclick="window.open('https://www.guokeyun.com/ipv6Monitor.html')">IPv6 接取測試</button>
 
 !!! tip "該頁面顯示的皆為腳本預設提供可供選擇的軟體源位址，如果沒有找到你想使用的也沒有關係，腳本支援命令選項可自定義使用，詳見[進階用法](../use/index.md#命令選項進階用法)"
 
