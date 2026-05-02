@@ -59,10 +59,36 @@ function getAlgoliaSearchConfig() {
         placeholder: AlgoliaI18nData[lang].placeholder,
         attributes: {
             primaryText: 'title',
-            secondaryText: 'description',
-            tertiaryText: 'itunesAuthor',
+            secondaryText: 'content',
             url: 'url',
-            image: 'imageUrl',
+        },
+        transformItems: (items) => {
+            let result
+            if (lang === 'zh-Hant') {
+                result = items.filter((item) => item.url.includes('/zh-Hant/'))
+            } else if (lang === 'en') {
+                result = items.filter((item) => item.url.includes('/en/'))
+            } else {
+                result = items.filter((item) => !item.url.includes('/en/') && !item.url.includes('/zh-Hant/'))
+            }
+            return result.map((item) => {
+                const type = item.type
+                const hlEntry = (type && item._highlightResult?.hierarchy?.[type]) || item._highlightResult?.hierarchy?.lvl2 || item._highlightResult?.hierarchy?.lvl1 || item._highlightResult?.hierarchy?.lvl0
+                const plainText = (type && item.hierarchy?.[type]) || item.hierarchy?.lvl2 || item.hierarchy?.lvl1 || item.hierarchy?.lvl0 || ''
+                const aisValue = hlEntry ? hlEntry.value.replace(/<span class="algolia-docsearch-suggestion--highlight">(.*?)<\/span>/g, '__ais-highlight__$1__/ais-highlight__') : plainText
+                return {
+                    ...item,
+                    title: plainText,
+                    _highlightResult: {
+                        ...item._highlightResult,
+                        title: {
+                            value: aisValue,
+                            matchLevel: hlEntry?.matchLevel || 'none',
+                            matchedWords: hlEntry?.matchedWords || [],
+                        },
+                    },
+                }
+            })
         },
         insights: false,
     }

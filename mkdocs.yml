@@ -27,7 +27,7 @@ extra_javascript:
   - assets/js/components/mirrors-table/index.js
 extra_css:
   - https://unpkg.com/tdesign-vue-next/dist/tdesign.min.css
-  - https://unpkg.com/@algolia/sitesearch@latest/dist/search-askai.min.css
+  - assets/css/search-askai.min.css
   - stylesheets/extra.css
 
 theme:
