@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
+{% block extrahead %}
+  {{ super() }}
+  <meta name="algolia-site-verification" content="8C276DF48C063CA8" />
+{% endblock %}
+
 {% block scripts %}
   {{ super() }}
 {% endblock %}
