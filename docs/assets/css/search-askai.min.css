@@ -2,15 +2,15 @@
 .modal-backdrop-askai,
 .sitesearch-button-aa {
     /* Core Colors */
-    --search-primary-color: #003dff;
-    --search-secondary-color: #5a5e9a;
-    --search-background-color: #f5f5fa;
-    --search-neutral-color: #ffffff;
-    --search-subtle-color: #9698c3;
-    --search-text-color: #23263b;
+    --search-primary-color: #0b0b0b;
+    --search-secondary-color: #6b7280;
+    --search-background-color: #ffffff;
+    --search-neutral-color: #f2f3f5;
+    --search-subtle-color: #6b7280;
+    --search-text-color: #0f172a;
     --search-subtle-text-color: #64748b;
-    --search-border-color: #d6d6e7;
-    --search-hover-color: #dde3f9;
+    --search-border-color: #e5e7eb;
+    --search-hover-color: #dbdbdb;
 
     /* Search Input */
     --search-input-font-size: 20px;
@@ -23,7 +23,7 @@
     --search-modal-backdrop-opacity: 0.5;
     --search-modal-border-radius: 0.75rem;
     --search-modal-max-width: 720px;
-    --search-modal-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --search-modal-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
 
     /* Results Panel */
     --search-results-max-height: 50vh;
@@ -57,16 +57,15 @@
 
     /* Animations */
     --search-transition-duration: 150ms;
-    --search-transform-hover: translateY(-1px);
 
     /* Markdown / code (Ask AI chat) */
-    --search-markdown-code-block-bg: #f1f5f9;
-    --search-markdown-code-block-color: #1e293b;
-    --search-markdown-code-inline-bg: rgba(30, 41, 59, 0.08);
-    --search-markdown-code-inline-border: rgba(30, 41, 59, 0.14);
+    --search-markdown-code-block-bg: #f8fafc;
+    --search-markdown-code-block-color: #0f172a;
+    --search-markdown-code-inline-bg: rgba(30, 41, 59, 0.04);
+    --search-markdown-code-inline-border: rgba(30, 41, 59, 0.08);
     --search-markdown-copy-btn-bg: rgba(255, 255, 255, 0.94);
     --search-markdown-copy-btn-hover-bg: #ffffff;
-    --search-markdown-copy-btn-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --search-markdown-copy-btn-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 
     /* Ask AI composer send (neutral chip, React reference) */
     --search-composer-submit-bg: #e5e7eb;
@@ -78,24 +77,25 @@
 .ssask-exp.dark,
 .modal-backdrop-askai.dark,
 .sitesearch-button-aa.dark {
-    --search-primary-color: #7aa2ff;
-    --search-secondary-color: #9aa1b2;
-    --search-background-color: #202127;
-    --search-neutral-color: #111016;
-    --search-subtle-color: #94a3b8;
+    /* Dark theme — neutral black background, light text (no blue/purple accents) */
+    --search-primary-color: #e5e7eb; /* highlight / accent (light neutral) */
+    --search-secondary-color: #94a3a8;
+    --search-background-color: #0b0b0b;
+    --search-neutral-color: #161616;
+    --search-subtle-color: #6b7280;
     --search-text-color: #e5e7eb;
-    --search-border-color: #374151;
-    --search-hover-color: #1f2937;
-    --search-markdown-code-block-bg: #12131a;
+    --search-border-color: #1f2937;
+    --search-hover-color: #232426;
+    --search-markdown-code-block-bg: #0b0b0b;
     --search-markdown-code-block-color: #c5cad3;
-    --search-markdown-code-inline-bg: rgba(255, 255, 255, 0.07);
-    --search-markdown-code-inline-border: rgba(255, 255, 255, 0.12);
+    --search-markdown-code-inline-bg: rgba(255, 255, 255, 0.03);
+    --search-markdown-code-inline-border: rgba(255, 255, 255, 0.06);
     --search-markdown-copy-btn-bg: rgba(18, 19, 26, 0.96);
     --search-markdown-copy-btn-hover-bg: #1a1b24;
     --search-markdown-copy-btn-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
-    --search-composer-submit-bg: #cbd5e1;
-    --search-composer-submit-bg-hover: #b8c4d4;
-    --search-composer-submit-icon: #1e293b;
+    --search-composer-submit-bg: #374151;
+    --search-composer-submit-bg-hover: #2f3340;
+    --search-composer-submit-icon: #e5e7eb;
 }
 
 .ssask-exp .ss-tool-info {
@@ -405,7 +405,7 @@
 
 .ssask-exp .ss-infinite-hits-item-description {
     color: var(--search-subtle-text-color);
-    margin: 0.5rem 0;
+    margin: 0;
     font-size: var(--search-hit-description-font-size);
     line-height: 1.5;
     text-overflow: ellipsis;
@@ -413,7 +413,7 @@
 
 .ssask-exp .ss-infinite-hits-item-tertiary {
     color: var(--search-subtle-text-color);
-    margin: 0.5rem 0;
+    margin: 0;
     font-size: var(--search-hit-tertiary-font-size);
     line-height: 1.5;
     text-overflow: ellipsis;
@@ -428,10 +428,22 @@
 
 .ssask-exp .ss-infinite-hits-anchor {
     gap: 1rem;
-    display: flex;
+    display: flex !important;
     cursor: pointer;
     text-decoration: none;
     color: inherit;
+}
+
+.ssask-exp .ss-infinite-hits-anchor p {
+    gap: 1rem;
+    display: flex !important;
+}
+
+.ss-infinite-hits-item-content {
+    display: flex !important;
+    flex-flow: column;
+    justify-content: start;
+    gap: 8px 12px;
 }
 
 /* minimal hover affordances for hits */
@@ -916,7 +928,6 @@
     background: var(--search-hover-color);
     border-color: var(--search-border-color);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    transform: var(--search-transform-hover);
 }
 
 .ssask-exp .ss-infinite-hits-item[aria-selected="true"] .ss-infinite-hits-item-title {

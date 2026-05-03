@@ -49,6 +49,8 @@ function getAlgoliaCurrentLang() {
 
 function getAlgoliaSearchConfig() {
     const lang = getAlgoliaCurrentLang()
+    const scheme = document.querySelector('[data-md-color-scheme]')?.getAttribute('data-md-color-scheme')
+    const isDarkMode = scheme === 'slate' || scheme === 'dark'
     return {
         container: '#search-container',
         applicationId: 'EQO6IPTEY8',
@@ -56,6 +58,7 @@ function getAlgoliaSearchConfig() {
         indexName: 'docs',
         assistantId: '967fa671-8a15-46d8-83cd-095bb3e3619a',
         agentStudio: true,
+        darkMode: isDarkMode,
         placeholder: AlgoliaI18nData[lang].placeholder,
         attributes: {
             primaryText: 'title',
